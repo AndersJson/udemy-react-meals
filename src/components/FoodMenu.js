@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "./Card";
+import FoodMenuItem from "./FoodMenuItem";
 
 import classes from "./FoodMenu.module.css";
 
@@ -36,7 +37,7 @@ const FoodMenu = () => {
 		<Card className={classes["food-menu"]}>
 			<ul className={classes["food-menu__list"]}>
 				{foodMenuObject.map((course) => {
-					return <li>{course.title}</li>;
+					return <FoodMenuItem />;
 				})}
 			</ul>
 		</Card>
