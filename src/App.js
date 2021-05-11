@@ -1,5 +1,7 @@
 import Header from "./components/Header";
 import Card from "./components/Card";
+import FoodMenu from "./components/FoodMenu";
+
 import classes from "./App.module.css";
 
 function App() {
@@ -11,6 +13,9 @@ function App() {
 				<Card className={classes["welcome-card"]}>
 					<h2>Welcome!</h2>
 				</Card>
+				<div className={classes["menu-wrapper"]}>
+					<FoodMenu />
+				</div>
 			</div>
 		</div>
 	);
