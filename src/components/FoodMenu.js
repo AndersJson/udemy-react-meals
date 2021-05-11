@@ -4,9 +4,14 @@ import Card from "./Card";
 import classes from "./FoodMenu.module.css";
 
 const FoodMenu = () => {
+	const foodMenuObject = [1, 2, 3, 4];
 	return (
 		<Card className={classes["food-menu"]}>
-			<h3>The Menu</h3>
+			<ul>
+				{foodMenuObject.map((course) => {
+					return <li>{course * 2}</li>;
+				})}
+			</ul>
 		</Card>
 	);
 };
