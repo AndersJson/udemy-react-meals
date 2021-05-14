@@ -16,7 +16,7 @@ const FoodMenu = () => {
 			id: "m2",
 			title: "Poke-Bowl",
 			description: "Mixed asian sallad, salmon and sticky rice.",
-			price: 18.5,
+			price: 18.55,
 		},
 		{
 			id: "m3",
@@ -54,7 +54,14 @@ const FoodMenu = () => {
 		<Card className={classes["food-menu"]}>
 			<ul className={classes["food-menu__list"]}>
 				{foodMenuObject.map((course) => {
-					return <FoodMenuItem key={course.id} />;
+					return (
+						<FoodMenuItem
+							key={course.id}
+							title={course.title}
+							description={course.description}
+							price={course.price}
+						/>
+					);
 				})}
 			</ul>
 		</Card>

@@ -4,7 +4,7 @@
 	align-items: center;
 	padding: 0 2%;
 	border-bottom: 1px solid darkolivegreen;
-	height: 100px;
+	height: 90px;
 }
 
 .food-menu__info {
@@ -19,4 +19,20 @@
 	flex-direction: column;
 	justify-content: space-evenly;
 	height: 100%;
+}
+
+.course-title {
+	font-weight: 600;
+	text-transform: capitalize;
+}
+
+.course-description {
+	font-weight: 300;
+	font-style: italic;
+	text-transform: capitalize;
+}
+
+.course-price {
+	font-weight: 600;
+	color: red;
 }
