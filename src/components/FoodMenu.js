@@ -60,6 +60,7 @@ const FoodMenu = () => {
 							title={course.title}
 							description={course.description}
 							price={course.price}
+							id={course.id}
 						/>
 					);
 				})}

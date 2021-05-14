@@ -1,0 +1,10 @@
+.order-input {
+	width: 4rem;
+	border-radius: 3px;
+	padding: 0.4rem;
+	border: 1px solid darkolivegreen;
+}
+
+.order-input__label {
+	margin-right: 10px;
+}
