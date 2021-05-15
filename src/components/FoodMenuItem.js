@@ -1,5 +1,6 @@
 import React from "react";
 import OrderInput from "./OrderInput";
+import Button from "./Button.js";
 
 import classes from "./FoodMenuItem.module.css";
 
@@ -13,9 +14,9 @@ const FoodMenuItem = (props) => {
 			</div>
 			<div className={classes["food-menu__action"]}>
 				<span>
-					<OrderInput id={props.id} />
+					<OrderInput id={props.id} inputHandler={props.inputHandler} />
 				</span>
-				<p>Button</p>
+				<Button>+ Add</Button>
 			</div>
 		</li>
 	);

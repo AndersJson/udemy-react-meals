@@ -50,6 +50,11 @@ const FoodMenu = () => {
 			price: 15.95,
 		},
 	];
+
+	const inputChangeHandler = (e) => {
+		console.log(e.target.value);
+	};
+
 	return (
 		<Card className={classes["food-menu"]}>
 			<ul className={classes["food-menu__list"]}>
@@ -61,6 +66,7 @@ const FoodMenu = () => {
 							description={course.description}
 							price={course.price}
 							id={course.id}
+							inputHandler={inputChangeHandler}
 						/>
 					);
 				})}

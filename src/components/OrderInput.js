@@ -14,6 +14,7 @@ const OrderInput = (props) => {
 			<input
 				className={classes["order-input"]}
 				id={`${props.id}-input`}
+				onChange={props.inputHandler}
 				type="number"
 			/>
 		</Fragment>
