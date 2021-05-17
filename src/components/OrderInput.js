@@ -1,10 +1,10 @@
-import React, { Fragment } from "react";
+import React from "react";
 
 import classes from "./OrderInput.module.css";
 
 const OrderInput = (props) => {
 	return (
-		<Fragment>
+		<div>
 			<label
 				className={classes["order-input__label"]}
 				htmlFor={`${props.id}-input`}
@@ -17,7 +17,7 @@ const OrderInput = (props) => {
 				onChange={props.inputHandler}
 				type="number"
 			/>
-		</Fragment>
+		</div>
 	);
 };
 

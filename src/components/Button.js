@@ -3,7 +3,11 @@ import React from "react";
 import classes from "./Button.module.css";
 
 const Button = (props) => {
-	return <button className={classes.btn}>{props.children}</button>;
+	return (
+		<button className={`${classes.btn} ${classes["btn--primary"]}`}>
+			{props.children}
+		</button>
+	);
 };
 
 export default Button;

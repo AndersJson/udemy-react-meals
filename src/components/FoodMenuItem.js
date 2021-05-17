@@ -13,9 +13,7 @@ const FoodMenuItem = (props) => {
 				<p className={classes["course-price"]}>{`$${props.price}`}</p>
 			</div>
 			<div className={classes["food-menu__action"]}>
-				<span>
-					<OrderInput id={props.id} inputHandler={props.inputHandler} />
-				</span>
+				<OrderInput id={props.id} inputHandler={props.inputHandler} />
 				<Button>+ Add</Button>
 			</div>
 		</li>

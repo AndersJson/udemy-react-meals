@@ -1,0 +1,16 @@
+.btn {
+	padding: 0.4rem 1rem;
+	border-radius: 200px;
+	color: #fff;
+	box-sizing: border-box;
+}
+
+.btn--primary {
+	border: none;
+	background-color: darkolivegreen;
+}
+
+.btn--secondary {
+	border: 2px solid darkolivegreen;
+	background-color: rgb(160, 167, 147);
+}
