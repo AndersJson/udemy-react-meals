@@ -8,3 +8,10 @@
 	background-color: darkolivegreen;
 	color: #fff;
 }
+
+.cart-modal {
+	background-color: #fff;
+	color: #000;
+	z-index: 200000;
+	padding: 2rem;
+}
