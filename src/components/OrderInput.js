@@ -16,6 +16,7 @@ const OrderInput = (props) => {
 				id={`${props.id}-input`}
 				onChange={props.inputHandler}
 				type="number"
+				min="1"
 			/>
 		</div>
 	);

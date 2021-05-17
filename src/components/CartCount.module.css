@@ -1,0 +1,10 @@
+.cart-count {
+	border-radius: 50%;
+	background-color: darkolivegreen;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 2rem;
+	height: 2rem;
+	font-size: 0.7rem;
+}

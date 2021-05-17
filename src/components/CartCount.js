@@ -1,11 +1,9 @@
 import React from "react";
 
+import classes from "./CartCount.module.css";
+
 const CartCount = () => {
-	return (
-		<div>
-			<span>0</span>
-		</div>
-	);
+	return <span className={classes["cart-count"]}>10</span>;
 };
 
 export default CartCount;
