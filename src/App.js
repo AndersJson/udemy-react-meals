@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import Header from "./components/Header";
 import Card from "./components/Card";
@@ -13,6 +13,14 @@ function App() {
 	const toggleModalVisibility = () => {
 		setIsModalVisible(!isModalVisible);
 	};
+
+	useEffect(() => {
+		if (isModalVisible === true) {
+			document.getElementsByTagName("body")[0].style.overflowY = "hidden";
+		} else {
+			document.getElementsByTagName("body")[0].style.overflowY = "auto";
+		}
+	}, [isModalVisible]);
 
 	return (
 		<div className={classes.App}>
