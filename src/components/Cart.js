@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import ReactDOM from "react-dom";
 import Card from "./Card";
 
-import classes from "./Modal.module.css";
+import classes from "./Cart.module.css";
 
 const ModalBackdrop = (props) => {
 	return (
@@ -20,7 +20,7 @@ const ModalOverlay = (props) => {
 	);
 };
 
-const Modal = (props) => {
+const Cart = (props) => {
 	return (
 		<Fragment>
 			{ReactDOM.createPortal(
@@ -35,4 +35,4 @@ const Modal = (props) => {
 	);
 };
 
-export default Modal;
+export default Cart;
