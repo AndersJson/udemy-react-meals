@@ -51,26 +51,21 @@ const FoodMenu = () => {
 		},
 	];
 
-	const inputChangeHandler = (e) => {
-		console.log(e.target.value);
-	};
+	const availableMeals = foodMenuObject.map((course) => {
+		return (
+			<FoodMenuItem
+				key={course.id}
+				title={course.title}
+				description={course.description}
+				price={course.price}
+				id={course.id}
+			/>
+		);
+	});
 
 	return (
 		<Card className={classes["food-menu"]}>
-			<ul className={classes["food-menu__list"]}>
-				{foodMenuObject.map((course) => {
-					return (
-						<FoodMenuItem
-							key={course.id}
-							title={course.title}
-							description={course.description}
-							price={course.price}
-							id={course.id}
-							inputHandler={inputChangeHandler}
-						/>
-					);
-				})}
-			</ul>
+			<ul className={classes["food-menu__list"]}>{availableMeals}</ul>
 		</Card>
 	);
 };

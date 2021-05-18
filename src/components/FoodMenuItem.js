@@ -1,6 +1,5 @@
 import React from "react";
-import OrderInput from "./OrderInput";
-import Button from "./Button.js";
+import MenuItemForm from "./MenuItemForm";
 
 import classes from "./FoodMenuItem.module.css";
 
@@ -12,10 +11,7 @@ const FoodMenuItem = (props) => {
 				<p className={classes["course-description"]}>{props.description}</p>
 				<p className={classes["course-price"]}>{`$${props.price}`}</p>
 			</div>
-			<div className={classes["food-menu__action"]}>
-				<OrderInput id={props.id} inputHandler={props.inputHandler} />
-				<Button>+ Add</Button>
-			</div>
+			<MenuItemForm id={props.id} />
 		</li>
 	);
 };

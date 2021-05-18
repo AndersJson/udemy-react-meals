@@ -1,12 +1,16 @@
+import React from "react";
+
 import Header from "./components/Header";
 import Card from "./components/Card";
 import FoodMenu from "./components/FoodMenu";
+import Modal from "./components/Modal";
 
 import classes from "./App.module.css";
 
 function App() {
 	return (
 		<div className={classes.App}>
+			<Modal />
 			<Header />
 			<div className={classes.hero}></div>
 			<div className={classes.content}>
