@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Header from "./components/Header";
 import Card from "./components/Card";
@@ -8,10 +8,16 @@ import Modal from "./components/Modal";
 import classes from "./App.module.css";
 
 function App() {
+	const [isModalVisible, setIsModalVisible] = useState(false);
+
+	const toggleModalVisibility = () => {
+		setIsModalVisible(!isModalVisible);
+	};
+
 	return (
 		<div className={classes.App}>
-			<Modal />
-			<Header />
+			<Modal onClick={toggleModalVisibility} isVisible={isModalVisible} />
+			<Header onClick={toggleModalVisibility} />
 			<div className={classes.hero}></div>
 			<div className={classes.content}>
 				<Card className={classes["welcome-card"]}>

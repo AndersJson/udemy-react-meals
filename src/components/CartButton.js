@@ -4,9 +4,9 @@ import CartCount from "./CartCount";
 
 import classes from "./CartButton.module.css";
 
-const CartButton = () => {
+const CartButton = (props) => {
 	return (
-		<button className={classes["cart-button"]}>
+		<button className={classes["cart-button"]} onClick={props.onClick}>
 			<CartIcon />
 			<p>Your Cart</p>
 			<CartCount />
