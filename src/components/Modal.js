@@ -5,38 +5,30 @@ import Card from "./Card";
 import classes from "./Modal.module.css";
 
 const ModalBackdrop = (props) => {
-	if (props.isVisible === true) {
-		return (
-			<div className={classes["modal--backdrop"]} onClick={props.onClick}></div>
-		);
-	} else {
-		return "";
-	}
+	return (
+		<div className={classes["modal--backdrop"]} onClick={props.onClick}></div>
+	);
 };
 
 const ModalOverlay = (props) => {
-	if (props.isVisible === true) {
-		return (
-			<Card
-				className={`${classes["modal-overlay"]} ${classes["modal-overlay--white"]}`}
-			>
-				{props.children}
-			</Card>
-		);
-	} else {
-		return "";
-	}
+	return (
+		<Card
+			className={`${classes["modal-overlay"]} ${classes["modal-overlay--white"]}`}
+		>
+			{props.children}
+		</Card>
+	);
 };
 
 const Modal = (props) => {
 	return (
 		<Fragment>
 			{ReactDOM.createPortal(
-				<ModalBackdrop isVisible={props.isVisible} onClick={props.onClick} />,
+				<ModalBackdrop onClick={props.onClick} />,
 				document.getElementById("cart-modal")
 			)}
 			{ReactDOM.createPortal(
-				<ModalOverlay isVisible={props.isVisible} />,
+				<ModalOverlay />,
 				document.getElementById("cart-modal")
 			)}
 		</Fragment>

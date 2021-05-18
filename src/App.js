@@ -24,7 +24,7 @@ function App() {
 
 	return (
 		<div className={classes.App}>
-			<Modal onClick={toggleModalVisibility} isVisible={isModalVisible} />
+			{isModalVisible && <Modal onClick={toggleModalVisibility} />}
 			<Header onClick={toggleModalVisibility} />
 			<div className={classes.hero}></div>
 			<div className={classes.content}>
