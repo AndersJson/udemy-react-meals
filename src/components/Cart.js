@@ -28,7 +28,7 @@ const Cart = (props) => {
 				document.getElementById("cart-modal")
 			)}
 			{ReactDOM.createPortal(
-				<ModalOverlay />,
+				<ModalOverlay></ModalOverlay>,
 				document.getElementById("cart-modal")
 			)}
 		</Fragment>

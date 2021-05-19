@@ -3,6 +3,7 @@
 	border-radius: 200px;
 	color: #fff;
 	box-sizing: border-box;
+	cursor: pointer;
 }
 
 .btn--primary {
