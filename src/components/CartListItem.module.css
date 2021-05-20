@@ -1,0 +1,25 @@
+.cart-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 2%;
+	border-bottom: 1px solid darkolivegreen;
+	height: 70px;
+}
+
+.cart-item__info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	height: 100%;
+}
+
+.cart-item__title {
+	font-weight: 600;
+	text-transform: capitalize;
+}
+
+.cart-item__price {
+	font-weight: 600;
+	color: red;
+}
