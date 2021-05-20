@@ -19,7 +19,19 @@
 	text-transform: capitalize;
 }
 
+.cart-item__price-wrapper {
+	display: flex;
+	align-items: center;
+}
+
 .cart-item__price {
 	font-weight: 600;
 	color: red;
+}
+
+.cart-item__amount {
+	margin-left: 2rem;
+	padding: 0.2rem 0.8rem;
+	border: 1px solid darkolivegreen;
+	border-radius: 3px;
 }
