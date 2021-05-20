@@ -25,15 +25,23 @@ const ModalOverlay = (props) => {
 
 const Cart = (props) => {
 	const cartCtx = useContext(CartContext);
+
 	const cartListItems = cartCtx.items.map((item) => {
 		return (
 			<CartListItem
+				key={item.id}
 				title={item.title}
 				price={item.price}
 				amount={item.amount}
 			/>
 		);
 	});
+
+	const totalPrice = cartCtx.items.reduce((acc, current) => {
+		return acc + current.amount * current.price;
+	}, 0);
+
+	const totalPriceOutput = `$${totalPrice.toFixed(2)}`;
 
 	return (
 		<Fragment>
@@ -44,9 +52,15 @@ const Cart = (props) => {
 			{ReactDOM.createPortal(
 				<ModalOverlay>
 					<ul className={classes["cart-list"]}>{cartListItems}</ul>
+					<div className={classes["cart-summary"]}>
+						<span>Total Price:</span>
+						<span>{totalPriceOutput}</span>
+					</div>
 					<div className={classes["cart__buttons"]}>
-						<Button>Close</Button>
-						<Button>Buy</Button>
+						<Button className="btn--secondary" onClick={props.onClick}>
+							Close
+						</Button>
+						{cartCtx.items.length > 0 && <Button>Buy</Button>}
 					</div>
 				</ModalOverlay>,
 				document.getElementById("cart-modal")

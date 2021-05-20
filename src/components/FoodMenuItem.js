@@ -21,7 +21,9 @@ const FoodMenuItem = (props) => {
 			<div className={classes["food-menu__info"]}>
 				<p className={classes["course-title"]}>{props.title}</p>
 				<p className={classes["course-description"]}>{props.description}</p>
-				<p className={classes["course-price"]}>{`$${props.price}`}</p>
+				<p className={classes["course-price"]}>{`$${props.price.toFixed(
+					2
+				)}`}</p>
 			</div>
 			<MenuItemForm onAddToCart={addToCartHandler} id={props.id} />
 		</li>

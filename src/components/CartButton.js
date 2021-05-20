@@ -7,6 +7,7 @@ import classes from "./CartButton.module.css";
 
 const CartButton = (props) => {
 	const cartCtx = useContext(CartContext);
+
 	const cartItemCount = cartCtx.items.reduce((acc, current) => {
 		return acc + current.amount;
 	}, 0);

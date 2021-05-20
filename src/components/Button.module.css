@@ -12,6 +12,6 @@
 }
 
 .btn--secondary {
-	border: 2px solid darkolivegreen;
+	border: none;
 	background-color: rgb(160, 167, 147);
 }
