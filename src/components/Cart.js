@@ -26,6 +26,14 @@ const ModalOverlay = (props) => {
 const Cart = (props) => {
 	const cartCtx = useContext(CartContext);
 
+	const cartItemRemoveHandler = (id) => {
+		cartCtx.removeItem(id);
+	};
+
+	const cartItemAddHandler = (item) => {
+		cartCtx.addItem({ ...item, amount: 1 });
+	};
+
 	const cartListItems = cartCtx.items.map((item) => {
 		return (
 			<CartListItem
@@ -33,6 +41,8 @@ const Cart = (props) => {
 				title={item.title}
 				price={item.price}
 				amount={item.amount}
+				onAdd={cartItemAddHandler.bind(null, item)}
+				onRemove={cartItemRemoveHandler.bind(null, item.id)}
 			/>
 		);
 	});
@@ -41,6 +51,7 @@ const Cart = (props) => {
 		return acc + current.amount * current.price;
 	}, 0);
 
+	const hasItems = cartCtx.items.length > 0;
 	const totalPriceOutput = `$${totalPrice.toFixed(2)}`;
 
 	return (
@@ -60,7 +71,7 @@ const Cart = (props) => {
 						<Button className="btn--secondary" onClick={props.onClick}>
 							Close
 						</Button>
-						{cartCtx.items.length > 0 && <Button>Buy</Button>}
+						{hasItems && <Button>Buy</Button>}
 					</div>
 				</ModalOverlay>,
 				document.getElementById("cart-modal")

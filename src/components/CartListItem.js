@@ -15,7 +15,20 @@ const CartListItem = (props) => {
 					>{`x${props.amount}`}</span>
 				</span>
 			</div>
-			<div className={classes["cart-item__action"]}>+ / -</div>
+			<div className={classes["cart-item__action"]}>
+				<button
+					className={classes["cart-item__action-button"]}
+					onClick={props.onRemove}
+				>
+					-
+				</button>
+				<button
+					className={classes["cart-item__action-button"]}
+					onClick={props.onAdd}
+				>
+					+
+				</button>
+			</div>
 		</li>
 	);
 };

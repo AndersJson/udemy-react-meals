@@ -35,3 +35,24 @@
 	border: 1px solid darkolivegreen;
 	border-radius: 3px;
 }
+
+.cart-item__action {
+	display: flex;
+}
+
+.cart-item__action-button {
+	padding: 0.3rem 0.6rem;
+	border: 1px solid darkolivegreen;
+	color: #fff;
+	background-color: rgb(160, 167, 147);
+	transition: all 200ms ease;
+	cursor: pointer;
+}
+
+.cart-item__action-button:hover {
+	background-color: darkolivegreen;
+}
+
+.cart-item__action-button:last-child {
+	margin-left: 0.8rem;
+}
