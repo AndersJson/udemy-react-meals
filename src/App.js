@@ -12,7 +12,9 @@ function App() {
 	const [isModalVisible, setIsModalVisible] = useState(false);
 
 	const toggleModalVisibility = () => {
-		setIsModalVisible(!isModalVisible);
+		setIsModalVisible((prevState) => {
+			return !prevState;
+		});
 	};
 
 	useEffect(() => {
